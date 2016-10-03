@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta name="google-site-verification" content="becvA6J7xqzYk3wFdPUmMsJA3rHie55dYaz5SiGUTXw" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+    <link href="themes/2016-style/css/bootstrap.css" rel="stylesheet">
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,index.js'}
+</head>
+<body class="index_page" style="position:relative;">
+<!--新增部分开始-->
+
+<div class="innerheader row">
+    <nav class="mainnav">
+        <div id="logo"><a href="#"><img class="site-logo" src="themes/mboppo2015/images/logo.gif" alt="ONAU昂" /></a></div>
+        <ul class="nav nav-tabs pull-left">
+            <li role="presentation" class="active"><a href="#">首页</a></li>
+            <li role="presentation"><a href="#">女性美肤</a></li>
+            <li role="presentation"><a href="#">男士护理</a></li>
+            <li role="presentation"><a href="#">关爱宝贝</a></li>
+            <li role="presentation"><a href="#">浪漫生活</a></li>
+            <li role="presentation"><a href="#">关于ONAU昂</a></li>
+            <li role="presentation"><a href="#">更多</a></li>
+        </ul>
+        <div class="cart-div pull-right">
+
+            <li><a href="/cart" id="cart"><i class="fa fa-shopping-cart" style="color: #FFFFFF; font-size: 3rem" aria-hidden="true"></i>购物车结算</a></li>
+            <li><a href="/register" id="register">注册</a>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+            <li><a href="/login" id="login">登录</a> &nbsp;|&nbsp; </li>
+
+        </div>
+    </nav>
+
+</div>
+
+<!-- Full Page Image Background Carousel Header -->
+<header id="myCarousel" class="carousel slide">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for Slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <!-- Set the first background image using inline CSS below. -->
+            <div class="fill" style="background-image:url('images/slider1.png');"></div>
+            <div class="carousel-caption">
+                <h2>Caption 1</h2>
+            </div>
+        </div>
+        <div class="item">
+            <!-- Set the second background image using inline CSS below. -->
+            <div class="fill" style="background-image:url('images/slider2.png');"></div>
+            <div class="carousel-caption">
+                <h2>Caption 2</h2>
+            </div>
+        </div>
+        <div class="item">
+            <!-- Set the third background image using inline CSS below. -->
+            <div class="fill" style="background-image:url('images/slider3.png');"></div>
+            <div class="carousel-caption">
+                <h2>Caption 3</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="icon-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="icon-next"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+    </a>
+
+</header>
+
+<!--新增部分结束-->
+
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/index_ad.lbi" --><!-- #EndLibraryItem -->
+
+<div class="blank"></div>
+<div class="block clearfix">
+
+<div class="AreaL">
+ <!-- TemplateBeginEditable name="商店公告" -->
+<!-- #BeginLibraryItem "/library/new_articles.lbi" -->
+
+<div id="mallNews"    class="  box_1">
+    <h3><span>站内快讯</span></h3>
+    <div class="NewsList tc  " style="border-top:none">
+        <ul>
+        <!--{foreach from=$new_articles item=article}-->
+        <li>
+      <a href="{$article.url}" title="{$article.title|escape:html}">{$article.short_title|truncate:20:"...":true}</a>
+        </li>
+        <!--{/foreach}-->
+        </ul>
+    </div>
+</div>
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->  
+
+<!-- TemplateBeginEditable name="商店公告下广告" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+<div class="blank"></div>
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+<div class="blank"></div>
+ <!-- #EndLibraryItem -->
+ <h3 style="width: 214px;"><span>联系微信客服</span></h3>
+<br>
+<img src="images/support.jpg" width="210" height="210" alt="">
+<!-- TemplateEndEditable -->
+
+</div>
+<div class="Arear clearfix"><div class="sale_box clearfix">
+<!-- TemplateBeginEditable name="促销商品区域" -->
+<!-- #BeginLibraryItem "/library/recommend_best.lbi" -->
+
+<!-- {if $best_goods} -->
+<!-- {if $cat_rec_sign neq 1} -->
+<div class="xm-box clearfix">
+  <div class="title">
+    <h2>精品推荐</h2>
+    <a class="more" href="../search.php?intro=best">更多>></a></div>
+  <div id="show_best_area" class="clearfix"> 
+    <!-- {/if} --> 
+    <!--{foreach from=$best_goods item=goods}-->
+    <div class="goodsItem"> <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a><br />
+      <p class="f1"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p>
+       <!-- <p class="index_price">市场价：<font class="market">{$goods.market_price}</font> </p> -->
+      <p class="index_price">本店价：<font class="f1"> 
+      <!-- {if $goods.promote_price neq ""} --> 
+      {$goods.promote_price} 
+      <!-- {else}--> 
+      {$goods.shop_price} 
+      <!--{/if}--> 
+      </font>
+      </p>
+       </div>
+    <!--{/foreach}--> 
+    
+    <!-- {if $cat_rec_sign neq 1} --> 
+  </div>
+</div>
+<div class="blank"></div>
+<!-- {/if} --> 
+<!-- {/if} --> 
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable --> </div>
+</div> 
+  <div class="goodsBox_1">
+  <!-- TemplateBeginEditable name="首页右侧区域" -->
+<!-- TemplateEndEditable -->
+  
+  <!-- TemplateBeginEditable name="全宽行" -->
+<!-- #BeginLibraryItem "/library/recommend_new.lbi" -->
+
+<!-- {if $new_goods} -->
+<!-- {if $cat_rec_sign neq 1} -->
+<div class="xm-box clearfix">
+  <div class="title">
+    <h2>新品上架</h2>
+    <a class="more" href="../search.php?intro=new">更多>></a></div>
+  <div id="show_new_area" class="clearfix"> 
+    <!-- {/if} --> 
+    <!--{foreach from=$new_goods item=goods}-->
+    <div class="goodsItem"> <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a><br />
+      <p class="f1"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p>
+     <!--  <p class="index_price"> -->
+     <!--  市场价：<font class="market">{$goods.market_price}</font></p> -->
+      <p class="index_price">本店价：<font class="f1"> 
+      <!-- {if $goods.promote_price neq ""} --> 
+      {$goods.promote_price} 
+      <!-- {else}--> 
+      {$goods.shop_price} 
+      <!--{/if}--> 
+      </font> </p>
+      
+      </div>
+    <!--{/foreach}--> 
+    
+    <!-- {if $cat_rec_sign neq 1} --> 
+  </div>
+</div>
+<div class="blank"></div>
+<!-- {/if} --> 
+<!-- {/if} --> 
+
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/recommend_hot.lbi" -->
+
+<!-- {if $hot_goods} -->
+<!-- {if $cat_rec_sign neq 1} -->
+<div class="xm-box clearfix">
+  <div class="title">
+    <h2>热卖商品</h2>
+    <a class="more" href="../search.php?intro=hot">更多>></a></div>
+  <div id="show_hot_area" class="clearfix "> 
+    <!-- {/if} --> 
+    <!--{foreach from=$hot_goods item=goods}-->
+    <div class="goodsItem"> <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a><br />
+      <p class="f1"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p>
+       <!-- <p class="index_price">市场价：<font class="market">{$goods.market_price}</font></p>  -->
+      <p class="index_price">本店价：<font class="f1"> 
+      <!-- {if $goods.promote_price neq ""} --> 
+      {$goods.promote_price} 
+      <!-- {else}--> 
+      {$goods.shop_price} 
+      <!--{/if}--> 
+      </font></p>
+      
+       </div>
+    <!--{/foreach}--> 
+    
+    <!-- {if $cat_rec_sign neq 1} --> 
+  </div>
+</div>
+<div class="blank"></div>
+<!-- {/if} --> 
+<!-- {/if} --> 
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+  </div> 
+  
+    </div>
+  <!--right end-->
+  
+  
+ 
+
+
+    <!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
+ 
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+
+
+<!-- jQuery -->
+<script src="themes/2016-style/js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="themes/2016-style/js/bootstrap.js"></script>
+
+<!-- Script to Activate the Carousel -->
+<script>
+    $('.carousel').carousel({
+        interval: 4500 //changes the speed
+    })
+</script>
+
+</body>
+</html>
